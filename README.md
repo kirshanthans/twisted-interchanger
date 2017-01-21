@@ -15,10 +15,12 @@ This is a source to source transformation tool written in clang 3.8.0 One needs 
 ### How to build the tool
 * cd clang-tool
 * make
+
 This will create a binary named tool
 
 ### How to use the tool
 * ./tool <filename>
+
 tool takes the file where the recursive nested traversals are written. There are plenty of examples for this in the benchmark folder.
 This tool requires compilation-database.json which contains the compilation commands for the files of the program that you are going to apply this transformation.
 This file can be created by hand if your program is simple. But if you have a make file project it can be create using the utility [Build EAR](https://github.com/rizsotto/Bear). 
@@ -30,7 +32,9 @@ For instance, point-correlation folder contains point-correlation/dual-tree dire
 
 * cd ./benchmark/point-correlation/dual-tree
 * make
+
 This will create a binary named run.
+
 Now let us see how to create a transformed version of the same code
 * cd ./bencmark/point-correlation
 * cp dual-tree twisted-tree
@@ -39,4 +43,5 @@ Now let us see how to create a transformed version of the same code
 * ../../../tool/tool ./src/traversal.cpp
 * Change the usage of the recursive function in the main.cpp file (This will be automated soon) e.g. recurse1(root1, root1); => recurse1(root1, root1, 0);
 * make 
+
 This sequence of steps will produce the binary for the transformed code
