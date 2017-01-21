@@ -19,7 +19,7 @@ This is a source to source transformation tool written in clang 3.8.0 One needs 
 This will create a binary named tool
 
 ### How to use the tool
-* ./tool <filename>
+* ./tool \<filename\>
 
 tool takes the file where the recursive nested traversals are written. There are plenty of examples for this in the benchmark folder.
 This tool requires compilation-database.json which contains the compilation commands for the files of the program that you are going to apply this transformation.
