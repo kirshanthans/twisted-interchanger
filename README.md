@@ -41,7 +41,9 @@ Now let us see how to create a transformed version of the same code
 * cd ./twisted-tree
 * bear make (This is not needed if you have the compilation-database.json)
 * ../../../tool/tool ./src/traversal.cpp
-* Change the usage of the recursive function in the main.cpp file (This will be automated soon) e.g. recurse1(root1, root1); => recurse1(root1, root1, 0);
+* Change the usage of the recursive function in the main.cpp file (This will be automated soon) 
+
+e.g. recurse1(root1, root1); => recurse1(root1, root1, 0);
 * make 
 
 This sequence of steps will produce the binary for the transformed code
